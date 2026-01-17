@@ -1,0 +1,45 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+
+    "include": [
+		"~/.config/waybar/modules.jsonc"
+	],
+
+    "modules-left": [
+		"hyprland/window"
+	],
+    "modules-center": [
+		"hyprland/workspaces",
+	],
+    "modules-right": [
+		"group/audio",
+	],
+
+	// Group Hardware
+	"group/hardware": {
+		"orientation": "horizontal",
+		"modules":[
+			"temperature",
+			"power-profiles-daemon",
+			"custom/wl-gammarelay-temperature",
+			"backlight"
+		]
+	},
+
+	// Group IO Audio
+	"group/audio": {
+		"orientation": "horizontal",
+		"modules": [
+			"pulseaudio",
+			"pulseaudio#microphone",
+			"clock"
+		]
+	},
+
+	// Group Exit
+}
